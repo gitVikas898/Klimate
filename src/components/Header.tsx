@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useTheme } from "./context/theme-provider"
-import { Button } from "./ui/button";
+
 import { Moon, Sun } from "lucide-react";
 import Citysearch from "./Citysearch";
 

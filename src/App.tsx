@@ -6,9 +6,6 @@ import WeatherDashboard from './pages/weather-dashboard'
 import CityPage from './pages/city-page'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
