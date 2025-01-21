@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useTheme } from "./context/theme-provider"
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
+import Citysearch from "./Citysearch";
 
 const Header = () => {
     const { theme, setTheme } = useTheme();
@@ -13,8 +14,11 @@ const Header = () => {
                     <img src={isDark ? "/logo.png" : "/logo2.png"} alt="klimate-logo" className="h-14" />
                 </Link>
 
-                <div>
+                <div className="flex gap-4">
                     {/**Search Bar */}
+
+                    <Citysearch/>
+
                     {/**Theme */}
                     <div className={`flex items-center cursor-pointer transition-transform duration-500
                         ${isDark ? "rotate-180" : "rotate-0"}
