@@ -29,7 +29,7 @@ const queryClient = useQueryClient();
     mutationFn:async (city : Omit<FavouriteCity,"id" | "addedAt">)=>{
         const newFavorite:FavouriteCity = {
             ...city,
-            id:`${city.lat}-${city.lon}-${Date.now()}`,
+            id:`${city.lat}-${city.lon}`,
             addedAt:Date.now(),
         };
 
@@ -69,5 +69,7 @@ const queryClient = useQueryClient();
    favorites:favoriteQuery.data,
    addToFavorite,
    removeFavorite,
+   isFavorite:(lat:number,lon:number)=>
+    favorites.some((city)=>city.lat === lat && city.lon ===lon)
   }
 }

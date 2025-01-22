@@ -9,6 +9,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { Toaster } from 'sonner'
 function App() {
 
   const queryClient = new QueryClient({
@@ -33,6 +34,7 @@ function App() {
               <Route path='/city/:cityName' element={<CityPage />} />
             </Routes>
           </Layout>
+          <Toaster richColors />
         </ThemeProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
